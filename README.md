@@ -12,11 +12,7 @@ To install pkauth, open your terminal or command prompt and enter the following 
 npm i pkauth
 ```
 
-## Usage
-
-Utilizing pkauth is straightforward. see the [API](#api) guide for more details.
-
-### Module
+## Example
 
 #### Standard authentication
 ```js
