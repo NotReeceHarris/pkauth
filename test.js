@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.get('/register', async (req, res) => {
   const keys = await pkAuth.generateKeyPair()
+  console.log(await pkAuth.encryptPrivateKey(keys.privateKey, 'abc123#'))
   database('INSERT INTO creds (public_key,revocation_certificate) VALUES (?,?)', [keys.publicKey, keys.revocationCertificate])
   res.json(keys)
 })
