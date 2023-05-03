@@ -1,6 +1,6 @@
 {
   "name": "pkauth",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "index.js",
   "scripts": {
     "test": "nodemon test.js"
@@ -8,6 +8,24 @@
   "dependencies": {
     "openpgp": "^5.8.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotReeceHarris/pkauth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NotReeceHarris/pkauth/issues"
+  },
+  "license": "AGPL-3.0",
+  "author": "Reece Harris <reeceharris@email.com>",
+  "homepage": "https://github.com/NotReeceHarris/pkauth#readme",
+  "keywords": [
+    "toopenpgp",
+    "authentication",
+    "passwordless",
+    "key-pair",
+    "private-key",
+    "encryption"
+  ],
   "devDependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
