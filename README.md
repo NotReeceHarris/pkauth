@@ -1,8 +1,8 @@
-# 🔑 PkAuth (Private key authentication)
+# PkAuth (Private key authentication)
 
 This npm package provides a secure user authentication method that utilizes private keys for authentication. By eliminating the need for usernames and passwords, it enhances security. However if you wanted added security with a passphrase, a encrypted private key option is avaliable. This authentication system employs openpgp and a curve algorithm of your choice to function effectively.
 
-## Installation
+## ⚙️ Installation
 
 Installing torv3 is a straightforward process. First, ensure that you have [Node.js](https://nodejs.org/) version `12.x` or higher and a node package manager (such as [NPM](https://www.npmjs.com/)) installed on your system.
 
@@ -11,10 +11,14 @@ To install pkauth, open your terminal or command prompt and enter the following 
 ```
 npm i pkauth
 ```
+<sub>You can also install [pkauth](https://github.com/NotReeceHarris/pkauth) directly from github with the git package `git clone https://github.com/NotReeceHarris/pkauth.git`.</sub>
+<br>
+<br>
 
-## Example
+## 📋 Example
 
 #### Standard authentication
+THis examples uses the standeard plaintext key-pairs, this is secure on its own granted the private-key is stored safely. and good opsec is used.
 ```js
 const pkauth = require('pkauth');
 const auth = new pkauth('ed25519')
@@ -35,10 +39,13 @@ const auth = new pkauth('ed25519')
   const valide = await auth.validateKeys(keys.privateKey, publicKey)
   /* True */
 })():
-
 ```
+<sub>This example uses the `ed25519 Edwards-curve`, this creates a key-pair then [validates](#authvalidatekeys) the key-pair.</sub>
+<br>
+<br>
 
 #### Encrypted authentication
+This example uses an encrypted version of the key-pairs meaning it adds an extra layer of security against leaking the private-key.
 ```js
 const pkauth = require('pkauth');
 const auth = new pkauth('ed25519')
@@ -72,7 +79,7 @@ const auth = new pkauth('ed25519')
 
 ```
 
-## API
+## 🔗 API
 
 ### `auth.generateKeyPair`
 ```js
