@@ -6,7 +6,7 @@
     "test": "nodemon test.js"
   },
   "dependencies": {
-    "openpgp": "^5.8.0"
+    "openpgp": "^5.10.1"
   },
   "repository": {
     "type": "git",
